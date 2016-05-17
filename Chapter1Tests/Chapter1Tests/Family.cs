@@ -15,7 +15,8 @@ namespace Chapter1Tests
                 select n;
 
             foreach (var name in shortNames)
-                Console.WriteLine($"Name: {name.FirstsName} {name.LastName}, DOB: {name.BirthDate:D}");
+                Console.WriteLine($"Name: {name.FirstsName} {name.LastName},\tDOB: {name.BirthDate:D}");
+            Console.WriteLine();
             Console.ReadKey();
         }
 
@@ -25,10 +26,23 @@ namespace Chapter1Tests
                 where n.BirthDate.Year < 1962
                 select n;
 
-
             foreach (var member in query)
-                Console.WriteLine($"Name: {member.FirstsName} {member.LastName}, DOB: {member.BirthDate:D}");
+                Console.WriteLine($"Name: {member.FirstsName} {member.LastName},\tDOB: {member.BirthDate:D}");
+            Console.WriteLine();
             Console.ReadKey();
+        }
+
+        public static void FamilyOrderedList(IEnumerable<Family> familyMembers)
+        {
+            var orderedList = from names in familyMembers
+                orderby names.BirthDate
+                select names;
+
+            foreach (var member in orderedList)
+                Console.WriteLine($"Name: {member.FirstsName} {member.LastName},\tDOB: {member.BirthDate:D}");
+            Console.WriteLine();
+            Console.ReadKey();
+
         }
     }
 }

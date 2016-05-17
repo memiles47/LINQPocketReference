@@ -1,18 +1,25 @@
-﻿namespace Chapter1Tests
+﻿using System;
+namespace Chapter1Tests
 {
     internal class Program
     {
         private static void Main()
         {
-            var ch1Examples = new FirstExamples();
-            ch1Examples.FirstExampleSet();
-     
-            var peopleSetOne = new GetPeople();
-            var familyMembers = peopleSetOne.GetFamily();
+            var peopleSet = new GetPeople();
+            var familyMembers = peopleSet.GetFamily();
+            var people = peopleSet.RndPeople();
+
+            Console.WriteLine("Query tests on Names");
+            Console.WriteLine("--------------------");
+
+            FirstExamples.ShortNames(people);
+            FirstExamples.FilteredNames(people);
+            FirstExamples.OrderedList(people);
+
 
             Family.BornBefore1962(familyMembers);
-
             Family.ShortFamilyNames(familyMembers);
+            Family.FamilyOrderedList(familyMembers);
         }
     }
 }

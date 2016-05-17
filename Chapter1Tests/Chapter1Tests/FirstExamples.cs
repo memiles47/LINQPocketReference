@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Chapter1Tests
@@ -8,7 +7,7 @@ namespace Chapter1Tests
     {
         public void FirstExampleSet()
         {
-            var names = Family.Names();
+            var names = RandomPeople.Names();
 
             var shortNames = names.Where(n => n.Length <= 4);
             var filteredNames = names.Where(n => n.Length > 4);

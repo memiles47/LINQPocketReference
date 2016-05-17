@@ -1,6 +1,6 @@
 ﻿namespace Chapter1Tests
 {
-    public class Employees : People
+    public class Employee : People
     {
         
     }

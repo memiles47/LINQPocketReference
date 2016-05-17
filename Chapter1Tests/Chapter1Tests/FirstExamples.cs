@@ -18,16 +18,15 @@ namespace Chapter1Tests
 
             foreach (var word in shortNames)
                 Console.WriteLine($"ShortNames: {word}");
-
             Console.WriteLine();
 
             foreach (var word in filteredNames)
                 Console.WriteLine($"Name: {word}");
-
             Console.WriteLine();
 
             foreach (var word in sortedNames)
                 Console.WriteLine($"Name: {word}");
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

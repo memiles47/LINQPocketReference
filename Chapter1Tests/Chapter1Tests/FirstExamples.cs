@@ -8,21 +8,7 @@ namespace Chapter1Tests
     {
         public void FirstExampleSet()
         {
-            var names = new List<string>()
-            {
-                "Tom",
-                "Dick",
-                "Harry",
-                "Mary",
-                "Jay",
-                "Rick",
-                "Chris",
-                "Tyra",
-                "Mike",
-                "Diane",
-                "Richard",
-                "Virginia"
-            };
+            var names = Family.Names();
 
             var shortNames = names.Where(n => n.Length <= 4);
             var filteredNames = names.Where(n => n.Length > 4);

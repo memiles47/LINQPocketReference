@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Employees.cs" />
     <Compile Include="Family.cs" />
+    <Compile Include="GetPeople.cs" />
     <Compile Include="RandomPeople.cs" />
     <Compile Include="FirstExamples.cs" />
     <Compile Include="People.cs" />

@@ -5,7 +5,7 @@ namespace Chapter1Tests
     public class DataBase
     {
         [Table(Name = "myDBase")]
-        private class Dbase
+        public class Dbase
         {
             [Column] public int Id;
             [Column] public string Name;

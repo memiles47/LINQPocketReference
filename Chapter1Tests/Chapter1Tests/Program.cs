@@ -11,7 +11,6 @@ namespace Chapter1Tests
             var peopleSet = new GetPeople();
             var familyMembers = peopleSet.GetFamily();
             var people = peopleSet.RndPeople();
-            //var database = new DataBase();
 
             Console.WriteLine("Query tests on Names");
             Console.WriteLine("--------------------");
@@ -36,10 +35,12 @@ namespace Chapter1Tests
 
             //Also from Essential LINQ
             var db = new DataContext(@"f:\SQL_DataBaseFiles\myDbase.mdf");
-            var query = from item in db.GetTable<DataBase>()
-                select item;
+            var query = from c in db.GetTable<Dbase>()
+                where c.Name == "Mike"
+                select c;
 
-            Console.WriteLine($"The data is: {query}");
+            foreach(var record in query)
+                Console.WriteLine($"Record: Name:{record.Name}, Title:{record.Title}");
         }
     }
 }

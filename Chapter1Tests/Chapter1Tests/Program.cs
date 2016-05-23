@@ -33,8 +33,11 @@ namespace Chapter1Tests
                 Console.WriteLine(fnameAndLnameAnddob);
             Console.WriteLine();
 
-            //Also from Essential LINQ
-            var db = new DataContext(@"f:\SQL_DataBaseFiles\myDbase.mdf");
+            //For SurfacePro 3
+            var db = new DataContext(@"D:\SQL_DataBaseFiles\myDbase.mdf");
+
+            //For SurfaceBook
+            //var db = new DataContext(@"F:\SQL_DataBaseFiles\myDbase.mdf");
             var query = from c in db.GetTable<Dbase>()
                 where c.Name == "Mike"
                 select c;

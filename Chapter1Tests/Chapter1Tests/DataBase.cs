@@ -1,7 +1,4 @@
-using System;
-using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Linq;
 
 namespace Chapter1Tests
 {

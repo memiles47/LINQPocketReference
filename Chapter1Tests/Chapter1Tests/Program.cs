@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Data.Linq;
 
 namespace Chapter1Tests
 {
@@ -11,6 +10,7 @@ namespace Chapter1Tests
             var peopleSet = new GetPeople();
             var familyMembers = peopleSet.GetFamily();
             var people = peopleSet.RndPeople();
+            var db = new DataClasses1DataContext();
 
             Console.WriteLine("Query tests on Names");
             Console.WriteLine("--------------------");
@@ -33,12 +33,7 @@ namespace Chapter1Tests
                 Console.WriteLine(fnameAndLnameAnddob);
             Console.WriteLine();
 
-            //For SurfacePro 3
-            var db = new DataContext(@"D:\SQL_DataBaseFiles\myDbase.mdf");
-
-            //For SurfaceBook
-            //var db = new DataContext(@"F:\SQL_DataBaseFiles\myDbase.mdf");
-            var query = from c in db.GetTable<Dbase>()
+            var query = from c in db.Table_1s
                 where c.Name == "Mike"
                 select c;
 
